@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.map-overlay .legend .bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #fca107, #7f3121);
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+
+#text {
+    overflow: auto;
+    height: 100px;
+}
+
+.map-right {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 73%;
+    padding: 10px;
+    opacity: 0.8;
+}
+
+.map-right .map-overlay-inner {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.bu {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 100%;
+    padding: 0.3em;
+    font: 10px Arial, sans-serif bold;
+    font-style: normal;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 2px;
+    vertical-align: text-bottom;
+    zoom: 1;
+    outline: none;
+    font-size-adjust: none;
+    font-stretch: normal;
+    border-radius: 50px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    color: #fefee9;
+    border: 0.2px solid #2299ff;
+    background-repeat: repeat;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: padding-box;
+    background-color: #3399ff;
+    background: linear-gradient(to bottom, #eeeff9 0%, #3399ff 100%);
+}
+
+.bu:hover {
+    background: #268DFF;
+}

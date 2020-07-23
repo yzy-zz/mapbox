@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style href="../css/index.css"></style>
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/echarts.main.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/jQuery.js"></script>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div class="map-overlay top">
+      <div class="map-overlay-inner">
+        <h2>Significant earthquakes in 2015</h2>
+        <label id="month"></label>
+        <input id="slider" type="range" min="0" max="11" step="1" value="0" />
+      </div>
+      <div class="map-overlay-inner">
+        <div id="legend" class="legend">
+          <div class="bar"></div>
+          <div>Magnitude (m)</div>
+        </div>
+      </div>
+      <div class="map-overlay-inner">
+        <h2>Text</h2>
+        <h3 id="h3"></h3>
+        <div id="text"></div>
+      </div>
+      <div class="map-overlay-inner">
+        <h2>Rect</h2>
+        <div id="rect" style="height: 430px;"></div>
+      </div>
+    </div>
+    <div class="map-right">
+      <div class="map-overlay-inner" style="height: 100px;">
+        <h2>Control panel</h2>
+        <button class="bu" id="bu1">Circle</button>
+        <button class="bu" id="bu2">HeatMap</button>
+        <button class="bu" id="bu3">Display</button>
+        <button class="bu" id="bu4">NotShow</button>
+      </div>
+      <div class="map-overlay-inner middle">
+        <h2>SanKey</h2>
+        <h3 id="h33"></h3>
+        <div id="sanji" style="height: 300px;"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var bu3 = document.getElementById("bu3");
+    bu3.addEventListener("click", function () {
+      var d1 = document.getElementsByClassName("map-overlay");
+      var d2 = document.getElementsByClassName("middle");
+      d1[0].style.opacity = 0.8;
+      d2[0].style.opacity = 0.8;
+      //console.log(d1[0])
+      //console.log(d1[0].style)
+      //d1.style.opacity = 0.0
+    });
+    var bu4 = document.getElementById("bu4");
+    bu4.addEventListener("click", function () {
+      var d3 = document.getElementsByClassName("map-overlay");
+      var d4 = document.getElementsByClassName("middle");
+      d3[0].style.opacity = 0.0;
+      d4[0].style.opacity = 0.0;
+    });
+  </script>
+  <script src="../js/map.js"></script>
+  <script src="../js/text.js"></script>
+  <script src="../js/rect.js"></script>
+  <script src="../js/sanji.js"></script>
+</html>
